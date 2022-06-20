@@ -1,0 +1,10 @@
+Option Explicit
+
+Sub Unhide_All()
+    Dim sh As Worksheet
+    
+    For Each sh In Worksheets
+        sh.Visible = True
+    Next sh
+
+End Sub
