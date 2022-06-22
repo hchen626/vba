@@ -24,4 +24,4 @@
       .CutCopyMode = False              ' In case you used paste special and turn off dotted box
   End With
   ```
-3. Copy a variably sized range with the CurrentRegion Property
+3. 
