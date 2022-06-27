@@ -24,4 +24,17 @@
       .CutCopyMode = False              ' In case you used paste special and turn off dotted box
   End With
   ```
-3. 
+3. Iterating example
+```vba
+Sub Replace_Formula()
+  ' Update cell formulas to have iferror
+  Dim cell As Range
+  Dim FormulaRange As Range
+  
+  Set FormulaRange = Cells.SpecialCells(xlCellTypeFormulas)
+  For Each cell In FormulaRange
+    cell.Formula = "=iferror(" & VBA.Mid(cell.Formula, 2) & ","""")"
+  Next cell
+
+End Sub
+```
